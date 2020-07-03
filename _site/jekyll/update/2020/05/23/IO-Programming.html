@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    
+
+    <!-- Non social metatags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    
+
+    <title>IO Programming</title>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Place this data between the <head> tags of your website -->
+
+<meta name="description" content="So in the Previous Post we looked at PORTS in detail and understood various parameters which need to be set in order to read and write to PORTS and Pins." />
+
+
+
+  <meta name="keywords" itemprop="categories" content="jekyll, update" />
+
+
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary_large_image" />
+
+
+
+<meta name="twitter:title" content="IO Programming" />
+<meta name="twitter:description" content="So in the Previous Post we looked at PORTS in detail and understood various parameters which need to be set in order to read and write to PORTS and Pins." />
+
+
+
+<!-- Twitter summary card with large image must be at least 280x150px -->
+
+<meta name="twitter:url" content="http://localhost:4000//jekyll/update/2020/05/23/IO-Programming.html" />
+
+<!-- Open Graph data -->
+<meta property="og:title" content="IO Programming" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:4000//jekyll/update/2020/05/23/IO-Programming.html" />
+
+
+<meta property="og:description" content="So in the Previous Post we looked at PORTS in detail and understood various parameters which need to be set in order to read and write to PORTS and Pins." />
+<meta property="og:site_name" content="Exploring Embedded" />
+
+
+<meta property="og:locale" content="" />
+
+
+  <meta property="article:published_time" content="2020-05-23T21:10:04+05:30" />
+
+
+
+
+  
+
+
+
+
+
+  
+    <meta property="article:tag" content="jekyll" />
+  
+    <meta property="article:tag" content="update" />
+  
+
+
+
+
+    
+
+    <link rel="canonical" href="http://localhost:4000/jekyll/update/2020/05/23/IO-Programming.html">
+
+    
+
+    <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+
+    <meta name="robots" content="noarchive">
+
+    <!-- <link rel="alternate" media="only screen and (max-width: 640px)" href="">
+        <link rel="alternate" media="handheld" href=""> -->
+
+
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/style.css?v=">
+</head>
+
+<body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+
+    
+      <a class="site-title" href="http://localhost:4000/">Exploring Embedded</a>
+    
+
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger">
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewbox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"></path>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"></path>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"></path>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+              
+                <a class="page-link" href="http://localhost:4000/now.html">Now</a>
+              
+            
+          
+            
+            
+              
+                <a class="page-link" href="http://localhost:4000/about.html">About</a>
+              
+            
+          
+            
+            
+          
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    
+    
+    
+
+    <section class="page-header">
+        <h1 class="project-name">IO Programming</h1>
+        <h2 class="project-tagline"></h2>
+        
+        <!-- Post tagline -->
+        
+        <h2 class="project-date">
+            <time datetime="2020-05-23T21:10:04+05:30" itemprop="datePublished">
+                
+                May 23, 2020
+            </time>
+            
+            
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Ashwin</span></span>
+            
+        </h2>
+        
+        <!-- End: Post tagline -->
+    </section>
+
+    <section class="main-content">
+
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+
+  <!-- <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">IO Programming</h1>
+    <p class="post-meta">
+      <time datetime="2020-05-23T21:10:04+05:30" itemprop="datePublished">
+        
+        May 23, 2020
+      </time>
+      
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Ashwin</span></span>
+      </p>
+  </header> -->
+
+  <div itemprop="articleBody">
+    <p>So in the Previous Post we looked at PORTS in detail and understood various parameters which need to be set in order to read and write to PORTS and Pins.</p>
+
+<p>In this Post we will actually get our hands dirty and write some basic programs to actually make use of IO programming.</p>
+
+<h1 id="lets-start-with-the-most-vanilla-task---blinking-an-led">Let’s start with the most vanilla task - Blinking an LED</h1>
+
+<p>Albeit of a different kind. Here we have been given a situation of the following order - There are leds connected to each pin of the PORTB, our task is to blink the leds such that each value between 00000000-11111111 (0-255) is shown on the leds.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="cp">#include &lt;avr/io.h&gt; // standard avr header
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+
+    <span class="n">DDRB</span> <span class="o">=</span> <span class="mh">0xFF</span><span class="p">;</span> <span class="c1">// setting up all the pins of PORTB as output pins</span>
+
+    <span class="n">PORTB</span> <span class="o">=</span> <span class="mh">0x00</span><span class="p">;</span> 
+
+    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">PORTB</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Explaination - As explained in the previous post we need to set the value of DDRx in order to send data to PORTx. In the next line we initialize the value of PORTB as 0x00, while this is not necessary as all the ports are set to zero by default on resetting, still it is a good practice. Next we enter in the while loop where we increment the current value of PORTB by one. Once it reaches 255, it will overflow back to 0 and this cycle will continue.</p>
+
+<h1 id="simple-enough-lets-look-at-something-a-little-more-advanced">Simple enough? Let’s look at something a little more advanced…</h1>
+
+<p>We will now attach a single led to the <strong>3rd Pin of Portb</strong> and a push button to <strong>5th pin of PortC</strong>. And you guessed it right, we will now toggle an led using the push button.</p>
+
+<p>But wait before you rant about the elementary nature of this task, you need to understand the fact that this time we need to only manipulate a single pin instead of working with the whole port. And in order to do that we need to <a href="https://www.tutorialspoint.com/ansi_c/c_bits_manipulation.htm" target="_blank" rel="noopener noreferrer nofollow">learn about bit manipulation in c</a>.</p>
+
+<p>Now that we have got that out of the way, lets look at what the code should be -</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="cp">#include &lt;avr/io.h&gt;
+</span>
+<span class="cp">#define ledpin_portB 2  // note that this is not 3
+#define button_portC 4  // and neither is this 5
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">DDRB</span> <span class="o">|=</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">ledpin_portB</span><span class="p">;</span>
+    <span class="n">DDRC</span> <span class="o">&amp;=</span> <span class="mi">0</span><span class="o">&lt;&lt;</span><span class="n">button_portC</span><span class="p">;</span>
+
+    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">PINC</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">button_portC</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">PORTB</span> <span class="o">|=</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">ledpin_portB</span><span class="p">;</span> 
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="n">PORTB</span> <span class="o">&amp;=</span> <span class="mi">0</span><span class="o">&lt;&lt;</span><span class="n">ledpin_portB</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The reason we have taken ledpin_portB as 2 and button_portC as 4 is because after the bits will be shifted, the position of 1 and 0 respectively will be 3rd pin(or 2nd bit) and 5th pin(or 4th bit). Basically, there is a difference between the Pin(1-8) and bits that can be used(0-7). So, when I say first pin, I mean the zero bit.</p>
+
+<p>The rest of the code has purposely been left uncommented, so that you can test your understanding.</p>
+
+<h1 id="final-exercise---lcd-interfacing">Final exercise - LCD interfacing</h1>
+
+<p>The data pins of LCD are connected to PORTB and the enable pin is connected to the <strong>6th pin of PORTC</strong>, the LCD will display a message only when the enable pin goes from high to low.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;avr/io.h&gt;
+</span>
+<span class="cp">#define lcd_enable 5
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    
+    <span class="n">DDRB</span> <span class="o">=</span> <span class="mh">0xFF</span><span class="p">;</span> <span class="c1">// Setting PORTB as output</span>
+
+    <span class="n">DDRC</span> <span class="o">|=</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">lcd_enable</span><span class="p">;</span> <span class="c1">// Setting 6th pin (or 5th bit) as output</span>
+
+    <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">message</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"Congrats!"</span>
+
+    <span class="n">sizeofmessage</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">message</span><span class="p">)</span><span class="o">/</span><span class="k">sizeof</span><span class="p">(</span><span class="n">message</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">sizeofmessage</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">PORTB</span> <span class="o">=</span> <span class="n">message</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        
+        <span class="n">PORTC</span> <span class="o">|=</span> <span class="mi">1</span><span class="o">&lt;&lt;</span><span class="n">lcd_enable</span><span class="p">;</span> <span class="c1">// setting the enable pin to high</span>
+        <span class="n">PORTC</span> <span class="o">&amp;=</span> <span class="mi">0</span><span class="o">&lt;&lt;</span><span class="n">lcd_enable</span><span class="p">;</span> <span class="c1">// setting the enable pin to low</span>
+    <span class="p">}</span> 
+
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Same as the earlier program we are setting the 6th pin (1-8 pins) or the 5th bit(0-7 bits) as output in portC, each time we enter the For loop, we set the value of enable pin from high to low and output a character from our message.</p>
+
+<p>It might seem difficult and intimidating at first, but no good thing comes without a cost. Here the cost is your dedication and perseverence.</p>
+
+<p><em>Author - amm0</em></p>
+
+<p>Check out the book by <a href="https://www.pearson.com/us/higher-education/program/Mazidi-AVR-Microcontroller-and-Embedded-Systems-Using-Assembly-and-C/PGM171768.html" target="_blank" rel="noopener noreferrer nofollow">Mazidi - AVR Microcontroller embedded programming</a>, for more info. Also the bread and butter of every firmware engineer, <a href="https://www.microchip.com/wwwproducts/en/ATmega328" target="_blank" rel="noopener noreferrer nofollow">AtMega328 datasheet</a>. 
+If you have questions or suggestions, you can reach out to me via <a href="f20180544@hyderabad.bits-pilani.ac.in">email</a> or on <a href="www.facebook.com/ashwin.olakangal">facebook</a>.</p>
+
+
+  </div>
+
+  
+</article>
+
+
+        <footer class="site-footer">
+            <!-- SVG icons from https://iconmonstr.com -->
+
+            <!-- Github icon -->
+            <center>
+                <span class="my-span-icon">
+                    <a href="" aria-label="'s GitHub" title="'s GitHub">
+                        <svg class="my-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                        </svg>
+                    </a>
+                </span>
+            </center>
+
+            <!-- Twitter icon -->
+            <!-- <span class="my-span-icon">
+                    <a href="https://twitter.com/" aria-label="'s Twitter" title="'s Twitter">
+                        <svg class="my-svg-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z"/></svg>
+                    </a>
+                </span> -->
+
+            <!-- RSS icon -->
+            <!--  -->
+
+            <!-- Contact icon -->
+            <!-- 
+             -->
+
+        </footer>
+    </section>
+
+    <script>
+        var menu = document.querySelector("nav.site-nav");
+        var checkbox = document.getElementById("nav-trigger");
+
+        // close menu if click outside menu
+        document.addEventListener("click", function (e) {
+            if (menu != e.target &&
+                !isDescendant(menu, e.target)) {
+                checkbox.checked = false;
+            }
+        }, false);
+
+        function isDescendant(parent, child) {
+            var node = child.parentNode;
+            while (node != null) {
+                if (node == parent) {
+                    return true;
+                }
+                node = node.parentNode;
+            }
+            return false;
+        }  
+    </script>
+
+</body>
+
+</html>
