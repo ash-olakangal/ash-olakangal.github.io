@@ -13,4 +13,4 @@ Currently, I am working towards understanding of firmware development with an ey
 
 You can find my [resume over here][Ashwin's Resume].
 
-[Ashwin's Resume]: https://github.com/ash-olakangal/ash-olakangal.github.io/tree/master/assets/AMO_Resume_latest.pdf/
+[Ashwin's Resume]: https://github.com/ash-olakangal/ash-olakangal.github.io/raw/master/assets/AMO_Resume_latest.pdf
