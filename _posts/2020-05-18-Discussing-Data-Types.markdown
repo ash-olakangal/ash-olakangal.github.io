@@ -38,7 +38,7 @@ Also, just for reference, uint< bit size >_t family is under stdint.h header fil
 
 **Reference table for different data-types in C -**
 
-![Different data-types in C]( assets/images/datatypes-in-c.png "A table of data types in C")
+![Different data-types in C]( /assets/images/datatypes-in-c.png "A table of data types in C")
 
 
 *Author - amm0*
